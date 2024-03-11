@@ -8,15 +8,28 @@ import {
 import { MenuItem } from "./Sidebar.types";
 import { Menu, Layout } from "antd";
 import { getItem } from "./utils";
+import { Link } from "react-router-dom";
 const { Sider } = Layout;
 
 const items: MenuItem[] = [
-  getItem("Home", "1", <HomeOutlined />),
-  getItem("Search", "2", <SearchOutlined />),
+  getItem(
+    "Home",
+    "1",
+    <Link to="/">
+      <HomeOutlined />
+    </Link>
+  ),
+  getItem(
+    "Search",
+    "2",
+    <Link to="/search">
+      <SearchOutlined />
+    </Link>
+  ),
   getItem("My music", "sub1", <MenuUnfoldOutlined />, [
     getItem("Favorite", "3", <PlayCircleOutlined />),
     getItem("PlayList1", "4", <PlayCircleOutlined />),
-    getItem("Create new playList", "4", <PlayCircleOutlined />),
+    getItem("Create new playList", "5", <PlayCircleOutlined />),
   ]),
 ];
 

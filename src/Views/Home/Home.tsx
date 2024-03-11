@@ -8,6 +8,7 @@ import { Search } from "../Search";
 import Tittles from "../../Components/Tittle/Tittle";
 import Title from "antd/es/skeleton/Title";
 import { Http2ServerRequest } from "http2";
+import listMusic from "../../Components/Search/listMusic.json";
 
 const { Content } = Layout;
 
@@ -23,6 +24,8 @@ const Home: React.FC = () => {
             height: "250px",
           }}
         >
+          {/* <Tittles />  */}
+
           <h2
             style={{
               color: "white",
@@ -30,9 +33,8 @@ const Home: React.FC = () => {
               margin: "auto",
               marginTop: "50px",
               justifyContent: "center",
-              fontSize:'44px',
-              fontFamily: 'Times, "Times New Roman", Georgia, serif'
-
+              fontSize: "44px",
+              fontFamily: 'Times, "Times New Roman", Georgia, serif',
             }}
           >
             Music way
@@ -49,26 +51,25 @@ const Home: React.FC = () => {
               textAlign: "center",
               margin: "auto",
               marginTop: "50px",
-              fontSize:'24px'
+              fontSize: "24px",
             }}
           >
             Most popular songs in this week
           </h2>
-          <ListOfCards />
+          <ListOfCards cards={listMusic} />
           <h2
             style={{
               color: "white",
               textAlign: "center",
               margin: "auto",
               marginTop: "50px",
-              fontSize:'24px',
-              textDecoration:''
-
+              fontSize: "24px",
+              textDecoration: "",
             }}
           >
             Last songs played
           </h2>
-          <ListOfCards />
+          <ListOfCards cards={listMusic} />
         </div>
       </Content>
     </BaseLayout>

@@ -8,8 +8,10 @@ import { Typography } from "antd";
 
 
 
-const Tittles = (props: Tittle) => {
-  return <StyledTittle></StyledTittle>
+const Titles = () => {
+  return <StyledTittle>
+    
+  </StyledTittle>
 
   }
-export default Tittles;
+export default Titles;

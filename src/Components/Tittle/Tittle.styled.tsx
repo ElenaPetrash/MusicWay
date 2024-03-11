@@ -10,11 +10,11 @@ const StyledTittle = styled(Title)<{
   $margin?: string;
   $marginTop?: string;
   $justifyContent?: string;
-  Text?: ReactNode;
-  Link?: LinkProps;
-  Title?: string;
-  Paragraph?: string;
-  children?: string;
+  $Text?: ReactNode;
+  $Link?: LinkProps;
+  $Title?: string;
+  $Paragraph?: string;
+  $children?: string;
   
 }>`
   color: ${({ $color }) => $color ?? "#ffffff"};
@@ -22,6 +22,7 @@ const StyledTittle = styled(Title)<{
   margin: ${({ $margin }) => $margin ?? "auto"};
   margin-top: ${({ $marginTop }) => $marginTop ?? "50px"}; 
   justify-content: ${({ $justifyContent }) => $justifyContent ?? "center"};
-`;
+
+  `;
 
 export default StyledTittle;

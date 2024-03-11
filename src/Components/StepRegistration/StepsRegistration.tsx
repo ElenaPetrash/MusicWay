@@ -28,32 +28,14 @@ const normFile = (e: any) => {
 };
 
 const StepsRegistration: React.FC = () => {
-  const [componentDisabled, setComponentDisabled] = useState<boolean>(true);
 
   return (
     <>
-      {/* <Checkbox
-        checked={componentDisabled}
-        onChange={(e) => setComponentDisabled(e.target.checked)}
-      >
-        Form disabled
-      </Checkbox> */}
+      
       <Form
-        // labelCol={{ span: 4 }}
-        // wrapperCol={{ span: 14 }}
-        // layout="horizontal"
-        // disabled={componentDisabled}
-        // style={{ maxWidth: 600 }}
+        
       >
-        {/* <Form.Item label="Checkbox" name="disabled" valuePropName="checked">
-          <Checkbox>Checkbox</Checkbox>
-        </Form.Item> */}
-        {/* <Form.Item label="Radio">
-          <Radio.Group>
-            <Radio value="apple"> Apple </Radio>
-            <Radio value="pear"> Pear </Radio>
-          </Radio.Group>
-        </Form.Item> */}
+       
         <Form.Item
         name="email"
         label="E-mail"
@@ -111,25 +93,21 @@ const StepsRegistration: React.FC = () => {
         <Form.Item label="Nickname">
           <Input />
         </Form.Item>
-        {/* <Form.Item label="Select">
-          <Select>
-            <Select.Option value="demo">Demo</Select.Option>
-          </Select>
-        </Form.Item> */}
+        
         <Form.Item label="Your role">
           <TreeSelect
             treeData={[
-              {
+              { required: true,
                 title: "Autor",
                 value: "Autor",
                 children: [{ title: "Bamboo", value: "bamboo" }],
               },
-              {
+              { required: true,
                 title: "User",
                 value: "User",
                 children: [{ title: "Bamboo", value: "bamboo" }],
               },
-              {
+              { required: true,
                 title: "Admin",
                 value: "Admin",
                 children: [{ title: "Bamboo", value: "bamboo" }],
@@ -137,31 +115,11 @@ const StepsRegistration: React.FC = () => {
             ]}
           />
         </Form.Item>
-        {/* <Form.Item label="Cascader">
-          <Cascader
-            options={[
-              {
-                value: "zhejiang",
-                label: "Zhejiang",
-                children: [
-                  {
-                    value: "hangzhou",
-                    label: "Hangzhou",
-                  },
-                ],
-              },
-            ]}
-          />
-        </Form.Item> */}
+       
         <Form.Item label="Your birthday">
           <DatePicker />
         </Form.Item>
-        {/* <Form.Item label="RangePicker">
-          <RangePicker />
-        </Form.Item> */}
-        {/* <Form.Item label="InputNumber">
-          <InputNumber />
-        </Form.Item> */}
+       
         <Form.Item label="About you">
           <TextArea rows={4} />
         </Form.Item>
@@ -176,19 +134,14 @@ const StepsRegistration: React.FC = () => {
           <Upload action="/upload.do" listType="picture-card">
             <div>
               <PlusOutlined />
-              <div style={{ marginTop: 8 }}>Upload</div>
+              <div style={{ marginTop: 8 }}>Your foto or image</div>
             </div>
           </Upload>
         </Form.Item>
         <Form.Item label="">
           <Button type="primary">Sign Up</Button>
         </Form.Item>
-        {/* <Form.Item label="Slider">
-          <Slider />
-        </Form.Item>
-        <Form.Item label="ColorPicker">
-          <ColorPicker />
-        </Form.Item> */}
+       
       </Form>
     </>
   );

@@ -2,12 +2,12 @@ import React from "react";
 import { Card, Col, Row, Button } from "antd";
 import ImgsListOfCard from "./ImgsListOfCards";
 import { PlayCircleOutlined } from "@ant-design/icons";
-import listMusic from "./Components/Search/listMusic.json"
+///import listMusic from "./Components/Search/listMusic.json"
 
-const ListOfCards = () => {
+const ListOfCards = (props:any) => {
   return (
     <Row gutter={16} style={{ background: "#002140", marginTop: "0px" }}>
-      {listMusic.map((e) => (
+      {props.cards.map((e:any) => (
   <Col key={e.name} span={4}>
     <Card
       title={e.name}
