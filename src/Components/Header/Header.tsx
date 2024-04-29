@@ -29,6 +29,8 @@ const Header = () => {
               shape="circle"
               style={{ color: "#fffff" }}
               icon={<UserOutlined />}
+              onClick={() => navigate("/adminPage")}
+              
             />
           </Tooltip>
         </Flex>

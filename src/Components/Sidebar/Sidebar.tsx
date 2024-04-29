@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   SearchOutlined,
   HomeOutlined,
@@ -8,8 +9,9 @@ import {
 import { MenuItem } from "./Sidebar.types";
 import { Menu, Layout } from "antd";
 import { getItem } from "./utils";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 const { Sider } = Layout;
+///const navigate = useNavigate();
 
 const items: MenuItem[] = [
   getItem(
@@ -26,8 +28,15 @@ const items: MenuItem[] = [
       <SearchOutlined />
     </Link>
   ),
-  getItem("My music", "sub1", <MenuUnfoldOutlined />, [
-    getItem("Favorite", "3", <PlayCircleOutlined />),
+  
+  getItem("My music", "sub1", 
+  
+    <MenuUnfoldOutlined />, [
+    getItem("Favorite", "3", 
+    <Link to="/listMusic">
+      <PlayCircleOutlined />
+      </Link>
+    ),
     getItem("PlayList1", "4", <PlayCircleOutlined />),
     getItem("Create new playList", "5", <PlayCircleOutlined />),
   ]),
